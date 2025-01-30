@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(0, 145, 255), dodgerblue);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+#caixa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 120px;
+    background-color: rgba(218, 162, 90, 0.749);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    border-radius: 15px;
+}
+
+#caixa p {
+    text-align: center;
+}
+
+#botaos {
+    font-size: 16px;
+}
+
+#rr {
+    background-color: blue;
+    color: black;
+}
+
+.bt {
+    color: black;
+    width: 85px;
+    height: 40px;
+    position: relative;
+    top: 10px;
+    left: 15px;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#start {
+    background-color: green;
+    color: black;
+}
+
+#p {
+    background-color: red;
+    color: black;
+   
+}
+
+/*top: 10px
+  position:absolute
+*/
+#rr:hover {
+    background-image: linear-gradient(to right, blue, dodgerblue);
+}
+
+#start:hover {
+    background-image: linear-gradient(to right, green, limegreen);
+}
+
+#p:hover {
+    background-image: linear-gradient(to right, red, orangered);
+}

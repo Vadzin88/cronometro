@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cronometro</title>
+</head>
+<body>
+    <div id="caixa">
+        <p><span id="m">0</span>:<span id="s">0</span></p>
+        <div id="botaos">
+            <button onclick="start()" class="bt" id="start">Start</button>
+            <button onclick="rrr()" class="bt" id="rr">Reiniciar</button>
+            <button onclick="pause()" class="bt" id="p">Pause</button>
+        </div>
+    </div>
+</body>
+    <script>
+        let ss = 0;
+        let mm = 0;
+        document.getElementById("m").textContent = "0" + mm;
+        let interval;
+        function start() {
+            if (!interval) {
+                interval = setInterval(function() {
+                ss++;
+                document.getElementById("s").textContent = ss;
+            if (ss >= 60) {
+                console.log("fkahkfa")
+                mm++;
+                ss = 0;
+                document.getElementById("m").textContent = mm;
+            }
+             if (mm > 9) {
+                document.getElementById("m").textContent = mm;
+             }
+            }, 1000)
+            }
+            
+        }
+
+        function pause() {
+            clearInterval(interval);
+            interval == null;
+        }
+
+        function rrr() {
+            clearInterval(interval);
+            interval = null;
+            ss = 0;
+            mm = 0;
+            document.getElementById("s").textContent = ss;
+            document.getElementById("m").textContent = "0" + mm;
+            console.log("reiniciado")
+        }
+
+        
+    </script>
+</html>
