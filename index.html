@@ -26,15 +26,15 @@
                 interval = setInterval(function() {
                 ss++;
                 document.getElementById("s").textContent = ss;
-            if (ss >= 60) {
-                console.log("fkahkfa")
+            if (ss >= 59) {
                 mm++;
                 ss = 0;
-                document.getElementById("m").textContent = mm;
+                if (mm <= 9) {
+                    document.getElementById("m").textContent = "0" + mm;       
+                } else {
+                    document.getElementById("m").textContent = mm;
+                }
             }
-             if (mm > 9) {
-                document.getElementById("m").textContent = mm;
-             }
             }, 1000)
             }
             
