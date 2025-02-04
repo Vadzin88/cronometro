@@ -50,6 +50,22 @@ body {
     cursor: pointer;
 }
 
+#tempo {
+    left: 25px;
+    width: 80%;
+}
+
+#tempos {
+    position: absolute;
+    width: 80%;
+    background-color: bisque;
+    top: -10px;
+    left: 370px;
+    border: black solid 2px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 200px;
+}
 
 #start {
     background-color: green;
@@ -75,4 +91,8 @@ body {
 
 #p:hover {
     background-image: linear-gradient(to right, red, orangered);
+}
+
+li {
+    list-style-position: inside
 }

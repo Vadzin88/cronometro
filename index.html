@@ -13,6 +13,11 @@
             <button onclick="start()" class="bt" id="start">Start</button>
             <button onclick="rrr()" class="bt" id="rr">Reiniciar</button>
             <button onclick="pause()" class="bt" id="p">Pause</button>
+            <button onclick="save()" id="tempo" class="bt">Salvar tempo</button>
+            <div id="tempos">
+                <p>Tempos salvos</p>
+                <ul id="lista"></ul>
+            </div>
         </div>
     </div>
 </body>
@@ -21,6 +26,8 @@
         let mm = 0;
         document.getElementById("m").textContent = "0" + mm;
         let interval;
+        const lista = document.getElementById("lista");
+        const tempos = document.getElementById("tempos");
         function start() {
             if (!interval) {
                 interval = setInterval(function() {
@@ -53,6 +60,14 @@
             document.getElementById("s").textContent = ss;
             document.getElementById("m").textContent = "0" + mm;
             console.log("reiniciado")
+            lista.innerHTML = "";
+        }
+
+        function save() {
+            const newtime = document.createElement("li");
+            tempos.style.height = lista;
+            newtime.textContent = "Tempo: " + mm + "min e " + ss + "s";
+            lista.appendChild(newtime);
         }
 
         
